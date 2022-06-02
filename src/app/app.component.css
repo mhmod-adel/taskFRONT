@@ -1,0 +1,12 @@
+.meals
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.meal
+{
+    width: 50%;
+    margin: 0px;
+}
