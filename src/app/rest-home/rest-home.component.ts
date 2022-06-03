@@ -2,67 +2,49 @@ import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { reduce } from 'rxjs';
- 
+
 @Component({
   selector: 'app-rest-home',
   templateUrl: './rest-home.component.html',
   styleUrls: ['./rest-home.component.css']
 })
 export class RestHomeComponent implements OnInit {
-red:string="red";
-toggele1:string="block";
-toggele2:string="none";
-toggele3:string="none";
-color1:string = "rgba(255, 99, 71, 0.5)";
-color2:string = "rgba(255, 99, 71, 0.1)";
-color3:string = "rgba(255, 99, 71, 0.1)";
- 
+  red: string = "red";
+  toggele1: string = "block";
+  toggele2: string = "none";
+  toggele3: string = "none";
+  color1: string = "rgba(255, 99, 71, 0.5)";
+  color2: string = "rgba(255, 99, 71, 0.1)";
+  color3: string = "rgba(255, 99, 71, 0.1)";
 
-
-  toggeleMenu() 
-  {
-   this.toggele1="block";
-   this.toggele2="none";
-   this.toggele3="none";
-   this.color1="rgba(255, 99, 71, 0.5)";
-   this.color2="rgba(255, 99, 71, 0.1)";
-   this.color3="rgba(255, 99, 71, 0.1)";
-   
+  toggeleMenu() {
+    this.toggele1 = "block";
+    this.toggele2 = "none";
+    this.toggele3 = "none";
+    this.color1 = "rgba(255, 99, 71, 0.5)";
+    this.color2 = "rgba(255, 99, 71, 0.1)";
+    this.color3 = "rgba(255, 99, 71, 0.1)";
   }
 
-
-  
-  toggeleFav() 
-  {
-   this.toggele1="none";
-   this.toggele2="block";
-   this.toggele3="none";
-   this.color1="rgba(255, 99, 71, 0.1)";
-   this.color2="rgba(255, 99, 71, 0.5)";
-   this.color3="rgba(255, 99, 71, 0.1)";
-   
-  
-   
+  toggeleFav() {
+    this.toggele1 = "none";
+    this.toggele2 = "block";
+    this.toggele3 = "none";
+    this.color1 = "rgba(255, 99, 71, 0.1)";
+    this.color2 = "rgba(255, 99, 71, 0.5)";
+    this.color3 = "rgba(255, 99, 71, 0.1)";
   }
 
-
-  
-  toggeleReviwe() 
-  {
-   this.toggele1="none";
-   this.toggele2="none";
-   this.toggele3="flex";
-   this.color1="rgba(255, 99, 71, 0.1)";
-   this.color2="rgba(255, 99, 71, 0.1)";
-   this.color3="rgba(255, 99, 71, 0.5)";
-   
-   
+  toggeleReviwe() {
+    this.toggele1 = "none";
+    this.toggele2 = "none";
+    this.toggele3 = "flex";
+    this.color1 = "rgba(255, 99, 71, 0.1)";
+    this.color2 = "rgba(255, 99, 71, 0.1)";
+    this.color3 = "rgba(255, 99, 71, 0.5)";
   }
 
-
-
-
-/*------------- OWEL SLIDER-------------------*/ 
+  /*------------- OWEL SLIDER-------------------*/
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -81,19 +63,13 @@ color3:string = "rgba(255, 99, 71, 0.1)";
       740: {
         items: 3
       }
-       
     },
     nav: false
   }
 
-
-
-
-
   constructor() { }
 
   ngOnInit(): void {
-     
   }
 
 }
