@@ -9,6 +9,26 @@ import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  menuShow:string="none";
+  i:number=0;
+  show(){
+    switch(this.menuShow) { 
+      case this.menuShow="none" :
+         //statements; 
+         this.menuShow="block" ;
+
+         break; 
+       
+      case  this.menuShow="block": 
+         //statements; 
+         this.menuShow="none"
+         break; 
+      
+       
+   } 
+  };
+  
+  
   color:string = "whitesmoke";
   color1:string = "whitesmoke";
 

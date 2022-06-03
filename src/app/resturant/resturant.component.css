@@ -132,7 +132,7 @@ color: #000;
 opacity:1;
 padding-bottom: 10px;
 }
-.price p span
+.price h3 span
 {
     color: tomato;
     opacity: .7;
@@ -154,4 +154,98 @@ padding-bottom: 10px;
     color: tomato;
     background-color: #fff;
     border: 1px solid tomato;
+}
+@media (max-width: 779px)
+{
+    .resturants
+{
+   
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+   
+    
+}
+    .resturant
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: right;
+        padding-left: 30px;
+         
+    }
+    .meal-cont{
+        width: 90%;
+    }
+    .resturant-cot{
+        width: 80%;
+    }
+    .resturant button
+{
+    padding: 10px 15px;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 96%;
+    right: 40%;
+}
+.resturant h2
+{
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+
+}
+@media (max-width: 450px)
+{
+    .resturants
+{
+   
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+   
+    
+}
+    .resturant
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: right;
+        padding-left: 30px;
+         
+    }
+    .meal-cont{
+        width: 90%;
+    }
+    .resturant-cot{
+        width: 80%;
+    }
+    .resturant button
+{
+    padding: 10px 15px;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 96%;
+    right: 34%;
+}
+.resturant h2
+{
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+
 }

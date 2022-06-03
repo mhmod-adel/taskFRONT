@@ -3,6 +3,7 @@
   height: 45px;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 .right-bar{
     list-style-type: none;
@@ -25,6 +26,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
   }
   .right-bar li:hover
   {
@@ -50,3 +52,59 @@
   {
       width: 100%;
   }
+  .menu-bar
+  {
+    display: none;
+    color: tomato;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+  }
+  .side-bar{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: block;
+      transition: all 2s;
+      transition-timing-function: ease;
+    }
+
+    
+    .side-bar li {
+      
+      margin: 0;
+    }
+    
+    .side-bar li a {
+      display: block;
+      color: #000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .side-bar li:hover
+    {
+      background-color: tomato;
+    }
+  @media (max-width: 500px)
+  {
+
+    .menu-bar
+    {
+      display: block; 
+    }
+    .right-bar li
+    {
+      display: none;
+    }
+    .lef-bar
+    {
+      padding-left: 20px;
+    }
+    
+
+  }
+  

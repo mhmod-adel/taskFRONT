@@ -129,7 +129,7 @@
 {
     width: 90%;
     margin: auto; 
-    height: 420px;
+    height: 423px;
     overflow: hidden;
     
 }
@@ -199,6 +199,76 @@ margin: 10px;
      margin: 10px;
 }
 
+@media (max-width: 779px)
+{
+    .Offers
+    {
+        height: 870px;
+    }
+    .card h3
+    {
+        font-size: 16px;
+    }
+    
+    .card p 
+    {
+        font-size: 14;
+    }
+}
 
+@media (max-width: 450px)
+{
+    .Offers
+    {
+        height: 650px;
+    }
+
+   .caption{
+        width: 70%;
+         
+       } 
+    .caption p {
+        padding-left: 0px;
+    }
+    .rest-nav
+    {
+        width: 90%;
+    }
+    .rest-nav button
+    {
+    padding: 5px 10px;
+    font-size: 14px;
+   
+    }
+
+  
+    .meal-imgs
+    {
+        width: 95%;
+    }
+    .rest-desc{
+    width: 95%;
+    }
+     
+    .reviwe
+    {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .card 
+    {
+        width: 80%;
+    }
+    .card h3
+    {
+        font-size: 16px;
+    }
+    
+    .card p 
+    {
+        font-size: 14;
+    }
+}
 
  
