@@ -8,6 +8,7 @@ import { ResturantComponent } from './resturant/resturant.component';
 import { RestHomeComponent } from './rest-home/rest-home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o'
 import{FormsModule} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
 
 const approutes:Routes =
 [
@@ -31,7 +32,8 @@ const approutes:Routes =
   imports: [ [ CarouselModule ],
     BrowserModule,
     RouterModule.forRoot(approutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
