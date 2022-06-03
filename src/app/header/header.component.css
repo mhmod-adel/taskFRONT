@@ -1,14 +1,22 @@
+.navbar
+{
+  height: 45px;
+  padding: 0;
+  margin: 0;
+}
 .right-bar{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: whitesmoke;
-    padding-right: 150px;
+    height: 45px;
+    
   }
   
   .right-bar li {
     float: right;
+    margin: 0;
   }
   
   .right-bar li a {
@@ -36,6 +44,7 @@
       padding-left: 120px;
       cursor: pointer;
       padding-top: 5px;
+      float: left;
   }
   .lef-bar img
   {

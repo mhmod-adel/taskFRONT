@@ -128,11 +128,15 @@
 .Offers
 {
     width: 90%;
-    margin: auto;
+    margin: auto; 
+    height: 420px;
+    overflow: hidden;
+    
 }
 .Offer
 {
     width: 50%;
+   
 }
 .Offers h3
 {
@@ -189,6 +193,10 @@ margin: 10px;
 .FAV
 {
     display: none;
+}
+.slider
+{
+     margin: 10px;
 }
 
 
