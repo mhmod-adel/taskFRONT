@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   color1: string = "whitesmoke";
   subscription: Subscription = new Subscription();
   typesList: RestaurantsTypes[] = [];
-
+  currentId:any;
   active() {
     this.color = "tomato";
     this.color1 = "whitesmoke";
@@ -34,11 +34,14 @@ export class HeaderComponent implements OnInit {
     this.subscription.add(
       this._Restaurants.getTypes().subscribe(res => {
         this.typesList = res?.data;
+        this.currentId = this.typesList[0].id;
+        this.changeType(this.typesList[0].id);
       })
     )
   }
 
   changeType(id:any){
+    this.currentId = id;
     this._Restaurants.changeType.next(id);
   }
 
