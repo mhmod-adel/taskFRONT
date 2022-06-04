@@ -88,11 +88,18 @@
 {
     background-color: rgba(255, 99, 71, 0.5);
 }
+.menu
+{
+    display: flex;
+ flex-direction: row;
+ width: 60%;
+}
 .meal-imgs
 {
-    width: 60%;
+    width: 20%;
     margin: auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     padding: 10px;
     margin-top: 20px;
@@ -193,6 +200,7 @@ margin: 10px;
 .FAV
 {
     display: none;
+     
 }
 .slider
 {

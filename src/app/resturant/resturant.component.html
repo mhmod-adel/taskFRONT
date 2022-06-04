@@ -1,4 +1,5 @@
-<div class="resturant">
+<div class="resturants"  >
+<div class="resturant"   >
   <div class="meal-cont">
     <i class="fa fa-heart heart" aria-hidden="true"></i>
     <img [src]="restaurant?.logo" onerror="this.src='/assets/download.jpg'" alt="">
@@ -16,7 +17,7 @@
     <div class="cap">
       <h1>WEZO</h1>
       <div class="img-contaner " routerLink="home">
-        <img [src]="restaurant?.qr_image" onerror="this.src='/assets/rest.jpg'" alt="">
+        <img [src]="restaurant?.image" onerror="this.src='/assets/rest.jpg'" alt="">
       </div>
     </div>
     <div class="price">
@@ -24,4 +25,5 @@
     </div>
     <a [routerLink]="['/restaurant-details',restaurant?.id]" ><button >Order Now <i class="fa fa-shopping-cart" aria-hidden="true"></i></button></a>
   </div>
+</div>
 </div>

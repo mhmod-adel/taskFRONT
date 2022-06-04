@@ -47,7 +47,7 @@
   </div>
 
   <div [ngStyle]="{'display': toggele2}" class="FAV">
-    <div class="meal-imgs">
+    <div class="meals-imgs">
       <img class="logo" src="assets\meal1.jpg" alt="">
       <img class="rest" src="assets\meal2 (2).jpg" alt="">
       <img class="rest" src="assets\meal3.jpg" alt="">
@@ -104,14 +104,14 @@
     </div>
   </div>
 </section>
-<section class="Offers" *ngIf="restData?.offers?.length">
+<section class="Offers" >
   <div>
     <h3>OFERRS</h3>
   </div>
   <owl-carousel-o [options]="customOptions" class="slider">
     <ng-container *ngFor="let item of restData?.offers">
       <ng-template carouselSlide>
-        <app-offer class="offer"></app-offer>
+        <app-resturant class="offer"></app-resturant>
       </ng-template>
     </ng-container>
 
