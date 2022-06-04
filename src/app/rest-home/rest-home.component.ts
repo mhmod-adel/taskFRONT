@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { reduce } from 'rxjs';
+import { reduce, Subscription } from 'rxjs';
+import { RestaurantsService } from "../services/resturants.service";
 
 @Component({
   selector: 'app-rest-home',
@@ -16,6 +17,7 @@ export class RestHomeComponent implements OnInit {
   color1: string = "rgba(255, 99, 71, 0.5)";
   color2: string = "rgba(255, 99, 71, 0.1)";
   color3: string = "rgba(255, 99, 71, 0.1)";
+  subscription: Subscription = new Subscription();
 
   toggeleMenu() {
     this.toggele1 = "block";
@@ -67,9 +69,20 @@ export class RestHomeComponent implements OnInit {
     nav: false
   }
 
-  constructor() { }
+  constructor(
+    private _Restaurants: RestaurantsService
+  ) { }
 
   ngOnInit(): void {
+    this.getTypes();
+  }
+
+  getTypes() {
+    this.subscription.add(
+      this._Restaurants.getTypes().subscribe(res => {
+        // this.typesList = res?.data;
+      })
+    )
   }
 
 }
