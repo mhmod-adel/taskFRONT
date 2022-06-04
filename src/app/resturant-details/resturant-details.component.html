@@ -12,6 +12,7 @@
       <i class="fa fa-star light" aria-hidden="true"></i>
 
     </div>
+    <div class="clear"></div>
     <p [innerHtml]="restData?.restaurant?.description"></p>
   </div>
 
@@ -106,10 +107,10 @@
 </section>
 <section class="Offers" >
   <div>
-    <h3>OFERRS</h3>
+    <h3>العروض الرائجه</h3>
   </div>
   <owl-carousel-o [options]="customOptions" class="slider">
-    <ng-container *ngFor="let item of restData?.offers">
+    <ng-container >
       <ng-template carouselSlide>
         <app-resturant class="offer"></app-resturant>
       </ng-template>

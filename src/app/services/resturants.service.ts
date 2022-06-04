@@ -518,7 +518,7 @@ export class RestaurantsService {
             "branch_type_name": "حلويات ومخبوزات",
             "theme_code": "dessertbakery",
             "sub_theme_code": "dessertbakery",
-            "name": "مطعم محمد احمد للحلويات",
+            "name": " مطعم لافوار",
             "description": "<p>مطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلوياتمطعم محمد احمد للحلويات</p>",
             "logo": "http://backend.eizymenu.com/storage/restaurant/IoWKgTZ9BLxaGyjATHVLQFXOs4xKyTSi0ecCXmmp.jpg",
             "country": {
@@ -547,6 +547,8 @@ export class RestaurantsService {
             "lat": "31.208909664979537",
             "lng": "29.91903283593749"
           }
+          
+          
         ],
         "message": "List of Restaurant if send branch type",
         "status": true,

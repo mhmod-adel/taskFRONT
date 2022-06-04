@@ -1,7 +1,9 @@
 .resturants
 {
-  width: 90%;
+  width: 100%;
   margin: auto;
+  
+  padding: 15px;
   display: flex;
   flex-direction: row;
   
