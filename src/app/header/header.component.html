@@ -1,21 +1,15 @@
-<nav class="navbar">
-    <ul  class="right-bar"> 
-     
-     
-        
-    
-        <li ><a #active routerLink="home">Home</a></li>
-        <li><a  routerLink="rest-home">Resturant</a></li>
-         
-         
-        <div class="lef-bar">
-           <img src="assets\logo.jpg" alt="">
-       </div>
-      
-    </ul>
-    
-      
-    </nav>
+<nav class="navbar d-block">
+  <ul class="right-bar">
+    <li><a #active routerLink="home">Home</a></li>
+
+    <li *ngFor="let item of typesList" (click)="changeType(item?.id)" [ngClass]="{'active': currentId == item?.id }" ><a>{{item?.name}}</a></li>
+
+    <div class="lef-bar">
+      <img src="assets\logo.jpg" alt="">
+    </div>
+  </ul>
+</nav>
+ 
 
 
 
@@ -25,10 +19,9 @@
 <ul  class="side-bar" [ngStyle]="{'display': menuShow}"> 
      
     <li ><a #active routerLink="home">Home</a></li>
-    <li ><a #active routerLink="home">Home</a></li>
-    <li ><a #active routerLink="home">Home</a></li>
-     
+    <li *ngFor="let item of typesList" (click)="changeType(item?.id)" [ngClass]="{'active': currentId == item?.id }" ><a>{{item?.name}}</a></li>
      
      
      
 </ul>
+

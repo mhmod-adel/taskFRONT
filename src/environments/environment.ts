@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url : 'http://backend.eizymenu.com/api/home/'
+  url : 'http://backend.eizymenu.com/api/'
 };
 
 /*

@@ -10,11 +10,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResturantDetailsComponent } from './resturant-details/resturant-details.component';
+import { OfferComponent } from './resturant-details/offer/offer.component';
 
 const approutes: Routes =
   [
     { path: 'home', component: HomeComponent },
     { path: 'rest-home', component: RestHomeComponent },
+    { path: 'restaurant-details/:id', component: ResturantDetailsComponent },
     { path: '', component: HomeComponent }
   ];
 
@@ -27,7 +30,9 @@ const approutes: Routes =
     HeaderComponent,
     HomeComponent,
     ResturantComponent,
-    RestHomeComponent
+    RestHomeComponent,
+    ResturantDetailsComponent,
+    OfferComponent
   ],
   imports: [
     CarouselModule,

@@ -35,6 +35,8 @@ export class HeaderComponent implements OnInit {
   subscription: Subscription = new Subscription();
   typesList: RestaurantsTypes[] = [];
  
+  currentId:any;
+   
 
   constructor(
     private _Restaurants: RestaurantsService
@@ -48,11 +50,14 @@ export class HeaderComponent implements OnInit {
     this.subscription.add(
       this._Restaurants.getTypes().subscribe(res => {
         this.typesList = res?.data;
+        this.currentId = this.typesList[0].id;
+        this.changeType(this.typesList[0].id);
       })
     )
   }
 
   changeType(id:any){
+    this.currentId = id;
     this._Restaurants.changeType.next(id);
   }
 

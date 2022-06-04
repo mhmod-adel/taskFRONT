@@ -1,0 +1,119 @@
+<section class="rest-home">
+  <div class="rest-img">
+    <img class="rest" [src]="restData?.restaurant?.qr_image" onerror="this.src='/assets/rest.jpg'" alt="">
+    <img class="logo" [src]="restData?.restaurant?.logo" onerror="this.src='assets/logo.jpg'" alt="">
+  </div>
+
+  <div class="caption">
+    <h3>{{restData?.restaurant?.name}}</h3>
+    <div class="stars">
+      <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+      <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+      <i class="fa fa-star light" aria-hidden="true"></i>
+
+    </div>
+    <p [innerHtml]="restData?.restaurant?.description"></p>
+  </div>
+
+
+
+</section>
+<section>
+
+  <div class="rest-nav">
+    <button (click)="toggeleMenu()" [ngStyle]="{'background-color': color1}" *ngIf="restData?.menu?.length"
+      class="now">MENU</button>
+
+    <button (click)="toggeleFav() " [ngStyle]="{'background-color': color2}">FAVORITE MEAL</button>
+
+    <button (click)="toggeleReviwe()" [ngStyle]="{'background-color': color3}">REVIEWS</button>
+
+  </div>
+
+  <div [ngStyle]="{'display': toggele1}" class="menu" *ngIf="restData?.menu?.length">
+    <div class="row">
+      <ng-container *ngFor="let menu of restData?.menu">
+        <div class="col-md-3">
+          <div class="meal-imgs">
+            <img class="logo" [src]="menu?.image" alt="">
+          </div>
+          <div class="rest-desc">
+            <button class="now">{{menu?.name}}</button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+
+  <div [ngStyle]="{'display': toggele2}" class="FAV">
+    <div class="meal-imgs">
+      <img class="logo" src="assets\meal1.jpg" alt="">
+      <img class="rest" src="assets\meal2 (2).jpg" alt="">
+      <img class="rest" src="assets\meal3.jpg" alt="">
+
+    </div>
+    <div class="rest-desc">
+
+      <button class="now">Super Compo</button>
+      <button>larg box</button>
+      <button>Hotdog</button>
+
+    </div>
+  </div>
+
+  <div [ngStyle]="{'display': toggele3}" class="reviwe">
+    <div class="card">
+      <img src="assets\one.jpg" alt="">
+      <h3>Ahmed Mammdoh</h3>
+      <div class="stars">
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star light" aria-hidden="true"></i>
+
+      </div>
+      <p>Ice Creem is virev nice. I recommended it</p>
+
+    </div>
+
+
+    <div class="card">
+      <img src="assets\two.png" alt="">
+      <h3>Yasser Awad</h3>
+      <div class="stars">
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star light" aria-hidden="true"></i>
+
+      </div>
+      <p>Salad is very nice. I recommended it</p>
+
+    </div>
+
+    <div class="card">
+      <img src="assets\three.jpg" alt="">
+      <h3>Mammdoh Taha</h3>
+      <div class="stars">
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star gold" aria-hidden="true"></i> <i class="fa fa-star gold" aria-hidden="true"></i>
+        <i class="fa fa-star light" aria-hidden="true"></i>
+
+      </div>
+      <p>Pasta is very nice. I recommended it</p>
+
+    </div>
+  </div>
+</section>
+<section class="Offers" *ngIf="restData?.offers?.length">
+  <div>
+    <h3>OFERRS</h3>
+  </div>
+  <owl-carousel-o [options]="customOptions" class="slider">
+    <ng-container *ngFor="let item of restData?.offers">
+      <ng-template carouselSlide>
+        <app-offer class="offer"></app-offer>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</section>
